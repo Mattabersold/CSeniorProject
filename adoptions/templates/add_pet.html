@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<div>
+
+    <form action='{% url "add_pet" %}' method="post">
+
+        {% csrf_token %}
+        
+        {{ form }}
+
+        <input type="submit"  value="Add Pet">
+    </form>
+</div>
+{% endblock %}
